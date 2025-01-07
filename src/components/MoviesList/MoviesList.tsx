@@ -11,16 +11,7 @@ export const MoviesList: React.FC<Movies> = ({ movies }) => {
   return (
     <div className="movies">
       {movies.map(movie => {
-        return (
-          <MovieCard
-            key={movie.imdbId}
-            title={movie.title}
-            description={movie.description}
-            imgUrl={movie.imgUrl}
-            imdbUrl={movie.imdbUrl}
-            imdbId={movie.imdbId}
-          />
-        );
+        return <MovieCard key={movie.imdbId} movie={movie} />;
       })}
     </div>
   );
